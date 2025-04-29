@@ -1,0 +1,405 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 20px var(--card-shadow);
+}
+
+.login-container h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.login-container p {
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.spotify-login-btn {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.spotify-login-btn:hover {
+    background-color: #1ED760;
+}
+
+.error-message, .error-alert {
+    background-color: var(--error-background);
+    color: var(--error-text);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.time-range-selector {
+    margin-bottom: 20px;
+}
+
+.time-range-selector select {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+.artist-card {
+    padding: 12px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--card-shadow);
+    transition: transform 0.2s;
+    max-width: 220px;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px var(--hover-shadow);
+}
+
+.artist-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.artist-image-placeholder {
+    width: 100%;
+    height: 70px;
+    background-color: var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.artist-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: var(--text-color);
+}
+
+.artist-popularity {
+    margin: 0 10px 10px;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.raw-data {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.raw-data pre {
+    margin: 0;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.my-stats {
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    display: grid;
+    margin: 30px auto;
+    background-color: var(--section-background);
+    border-radius:10px ;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+
+.my-stats-genres,
+.my-stats-minigame-time,
+.my-stats-songs{
+    background-color: var(--section-item-background);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 20px;
+    border-radius:10px ;
+    box-shadow: 0 10px 20px var(--hover-shadow);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    max-height: 600px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.my-stats-recently-played,
+.my-stats-reccomendation{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: var(--section-item-background);
+    padding: 20px;
+    border-radius: 10px ;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
+}
+
+.my-stats-artists:hover,
+.my-stats-recently-played:hover,
+.my-stats-genres:hover,
+.my-stats-minigame-time:hover,
+.my-stats-songs:hover,
+.my-stats-listening-graph:hover,
+.my-stats-reccomendation:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px var(--hover-shadow);
+}
+
+.my-stats-artists{
+    background-color: var(--section-item-background);
+    padding: 20px;
+    border-radius:10px ;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.my-stats-recently-played,
+.my-stats-genres,
+.my-stats-minigame-time{
+    grid-column: span 1;
+}
+
+.my-stats-reccomendation{
+    grid-column: span 1;
+}
+
+.my-stats h3 {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+
+.my-stats-recently-played{
+    background-color: var(--section-item-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    color: var(--text-color);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.recent-tracks-list{
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.recent-track{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 6px var(--card-shadow);
+    color: var(--text-color);
+    transition: transform 0.2s ease;
+}
+
+.recent-track-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.recent-track-info {
+    text-align: left;
+}
+
+
+.home-container h1{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+
+.recent-track {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: var(--card-background);
+    box-shadow: 0 2px 6px var(--card-shadow);
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.recent-track:hover {
+    transform: scale(1.02);
+}
+
+.recent-track-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.recent-track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.track-artist {
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+
+.genre-card,
+.minigame-card{
+    background-color: var(--card-background);
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.genre-name,
+.high-score{
+    color: var(--text-color);
+}
+
+.genre-and-minigame{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.minigame-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.toggle-button {
+    background-color: #1a4727;
+    color: var(--button-text);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: -18px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.toggle-button:hover {
+    background-color: #235230;
+    transform: scale(1.1);
+}
+
+.toggle-label {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
